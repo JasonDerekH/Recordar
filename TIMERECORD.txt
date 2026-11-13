@@ -1,8 +1,8 @@
 # CSE 310 - Sprint Time Log
 
-Name:
+Name: Jason Hollingsworth
 
-Sprint #:
+Sprint #: 4
 
 ## Instructions
 
