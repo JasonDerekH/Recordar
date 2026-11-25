@@ -7,7 +7,14 @@ export type Note = {
   updatedAt: string;
 };
 
-export type QuizQuestion = {
+export type Question = {
+  id: string;
+  noteId: string;
   prompt: string;
   answer: string;
+};
+
+export type QuizResult = {
+  questionId: string;
+  correct: boolean;
 };
