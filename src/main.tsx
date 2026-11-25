@@ -8,8 +8,15 @@ import "./styles.css";
 
 function Root() {
   const [notes, setNotes] = useState<Note[]>(() => loadNotes(sampleNotes));
-  function updateNotes(next: Note[]) { setNotes(next); saveNotes(next); }
+  function updateNotes(next: Note[]) {
+    setNotes(next);
+    saveNotes(next);
+  }
   return <App notes={notes} onNotesChange={updateNotes} />;
 }
 
-createRoot(document.getElementById("root")!).render(<StrictMode><Root /></StrictMode>);
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <Root />
+  </StrictMode>,
+);

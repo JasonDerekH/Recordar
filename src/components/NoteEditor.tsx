@@ -14,8 +14,30 @@ export function NoteEditor({ note, onSave }: Props) {
 
   return (
     <form className="card editor" onSubmit={submit}>
-      <label>Title<input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="What are you learning?" /></label>
-      <label>Note<textarea value={content} onChange={(e) => setContent(e.target.value)} placeholder="Write the idea in your own words..." rows={7} /></label>
+      <div className="editor-heading">
+        <div>
+          <p className="eyebrow">{note ? "Edit note" : "New note"}</p>
+          <h2>{note ? "Refine the idea" : "Capture an idea"}</h2>
+        </div>
+        <span className="editor-status">Saved locally</span>
+      </div>
+      <label>
+        Title
+        <input
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="What are you learning?"
+        />
+      </label>
+      <label>
+        Note
+        <textarea
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          placeholder="Write the idea in your own words..."
+          rows={7}
+        />
+      </label>
       <button type="submit">{note ? "Save changes" : "Add note"}</button>
     </form>
   );
